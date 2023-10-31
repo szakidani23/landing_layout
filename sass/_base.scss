@@ -1,0 +1,48 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: inherit;
+}
+
+// COLOR VARIABLES //
+$color-primary: hsl(192, 100%, 9%);
+$color-secondary: hsl(208, 11%, 55%);
+$color-tertiary: hsl(193, 100%, 96%);
+$color-pink: hsl(322, 100%, 66%);
+$color-white: #ffffff;
+
+// FONT VARIABLES //
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+
+
+// RESPONSIVE BREAKPOINTS
+$bp-largestofall: 90em; //1440px
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+h1,h2 {
+  font-family: $font-primary;
+  color: $color-primary;
+}
+
+html {
+  font-size: 62.5%;  // With this method 1rem will be exactly 10px  (easier to calculate with 10px=1rem) //
+  box-sizing: border-box;
+  overflow-x: hidden;
+  ///Applies on >=1000px = 100rem = 62.5em
+  @media screen and (max-width: $bp-large) {
+    font-size: 52.5%;
+  }
+  @media screen and (max-width: $bp-small) {
+    font-size:42.5%;
+  }
+}
+
+body {
+  min-height: 100vh;
+  font-family: $font-secondary;
+  font-size: 1.8rem;
+}
